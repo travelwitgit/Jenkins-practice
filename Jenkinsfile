@@ -10,10 +10,10 @@ pipeline {
 }
     stage('Check Python') {
        steps {
-         sh ''''
+         sh '''
             python3 --version
             python3 -m pip --version
-            ''''
+            '''
 }
 }
     stage('Install Dependencies') {
