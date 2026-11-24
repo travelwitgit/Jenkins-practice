@@ -8,6 +8,15 @@ pipeline {
         checkout scm
 }
 }
+    stage('Install Python Tools') {
+      steps {
+        sh '''
+           sudo apt-get update
+           sudo apt-get install -y python3-pip python3-venv
+           '''
+}
+}
+
     stage('Check Python') {
        steps {
          sh '''
